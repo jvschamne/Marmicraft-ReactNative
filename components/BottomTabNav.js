@@ -1,6 +1,7 @@
 import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+<<<<<<< HEAD
 export default function BottomTabNav () {   
     
     const navigation = useNavigation();
@@ -9,11 +10,21 @@ export default function BottomTabNav () {
         // implementar a lógica de autenticação aqui
         console.log('oi')
         navigation.navigate('Login');
+=======
+export default function BottomTabNav ({userData, userType}) {   
+    
+    const navigation = useNavigation();
+     
+    const handlePress = (screen) => {
+        console.log('navigate', screen)
+        navigation.navigate(screen);
+>>>>>>> 181636dd63a049d7e9235a65be0c6cd88f956bd6
     };
 
 
     return(
         <View style={styles.nav}>
+<<<<<<< HEAD
             <TouchableOpacity style={styles.navButton} onPress={handleLogin}>
                 <Text style={styles.text}>Restaurantes</Text>
             </TouchableOpacity>
@@ -21,6 +32,12 @@ export default function BottomTabNav () {
                 <Text style={styles.text}>Pesquisar</Text>
             </TouchableOpacity>
             <TouchableOpacity style={styles.navButton} onPress={handleLogin}>
+=======
+            <TouchableOpacity style={styles.navButton} onPress={() => handlePress('Menu')}>
+                <Text style={styles.text}>Restaurantes</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.navButton} onPress={() => handlePress('Perfil')}>
+>>>>>>> 181636dd63a049d7e9235a65be0c6cd88f956bd6
                 <Text style={styles.text}>Perfil</Text>
             </TouchableOpacity>
         </View>

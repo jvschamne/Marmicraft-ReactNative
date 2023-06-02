@@ -7,10 +7,15 @@ import app from '../config/firebase';
 
 export default function Signup() {
   
+<<<<<<< HEAD
+=======
+  const navigation = useNavigation();
+>>>>>>> 181636dd63a049d7e9235a65be0c6cd88f956bd6
   const [etapa, setEtapa] = useState(1)
 
   return (
     <View style={styles.container}>
+<<<<<<< HEAD
     
       {etapa === 1 &&
         <>
@@ -37,6 +42,22 @@ export default function Signup() {
 
 
      
+=======
+        <>
+          <Text style={styles.title}>Como deseja se cadastrar?</Text>
+
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Register", {type : 'clientes'})}>
+            <Text style={styles.buttonText}>CLIENTE</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Register", {type : 'restaurantes'})}>
+            <Text style={styles.buttonText}>RESTAURANTE</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Register", {type : 'entregadores'})}>
+            <Text style={styles.buttonText}>ENTREGADOR</Text>
+          </TouchableOpacity>
+        </>
+
+>>>>>>> 181636dd63a049d7e9235a65be0c6cd88f956bd6
       <StatusBar style="auto" />
     </View>
   );
